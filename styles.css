@@ -1,0 +1,30 @@
+html, body { margin: 0; padding: 0; width: 100%; height: 100%; }
+
+.gauge-bg {
+  width: 100%;
+  height: 100%;
+  color: rgb(0, 0, 0);
+}
+
+.gauge-bg::before, .gauge-bg::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.gauge-bg::after {
+  background-image:
+    linear-gradient(45deg, rgba(5, 45, 173, 0.8) 40%, transparent 40%), 
+    linear-gradient(45deg, transparent 60%, rgba(5, 45, 173, 0.8) 60%);
+  background-size:10px 10px;
+  background-position:0 0, 8px -8px;
+}
+
+.gauge-bg::before {
+  background-image: linear-gradient(rgba(7, 77, 133, 1) 0%, rgba(11, 159, 217,1) 50%, rgba(7, 77, 133, 1) 100%);
+}
