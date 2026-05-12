@@ -63,57 +63,6 @@ html, body {
   background-image: linear-gradient(rgba(7, 77, 133, 1) 0%, rgba(11, 159, 217,1) 50%, rgba(7, 77, 133, 1) 100%);
 }
 
-.lists{
-  display: flex;
-  width: 40%;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-.items{
-  border: 5px solid transparent;
-  width: calc( (100% - 40px) / 5 );
-  aspect-ratio: 1/1;
-  background: royalblue;
-  color: #fff;
-  font-size: 30px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  order: var(--i);
-  filter: hue-rotate(calc(var(--i) * 10deg));
-}
-.items:nth-child(10n + 6){
-  order: calc(var(--i) + 4)
-}
-.items:nth-child(10n + 7){
-  order: calc(var(--i) + 2)
-}
-.items:nth-child(10n + 9){
-  order: calc(var(--i) - 1)
-}
-.items:nth-child(10n + 10){
-  order: calc(var(--i) - 3)
-}
-.items:nth-child(10n + 6):last-child,
-.items:nth-child(10n + 7):last-child{
-  margin-left: auto;
-}
-.action{
-  margin-top: 20px;
-}
-
-.items::after{
-  border: 15px solid transparent;
-  content: "";
-  position: absolute;
-  width: 100%; /* Width of the bar relative to circle */
-  height: 5%; /* Thickness of the bar */
-  background-color: black;
-  border-radius: 0px; /* Optional: rounds the ends of the bar */
-  z-index: -1;
-}
-
 .counters{
   display: flex;
   justify-content: flex-start;
@@ -133,7 +82,7 @@ html, body {
   align-items: center;
   justify-content: center;
   order: var(--i);
-  width: 100px;
+  width: 15vh;
   /*margin: 0px if(style(--i: 0): calc( (100% - 40px) / 5 ); else: 0px) 0px if(style(--i: 0): calc( (100% - 40px) / 5 ); else: 0px) ;*/
   filter: hue-rotate(calc(var(--i) * 10deg));
 }
@@ -141,8 +90,7 @@ html, body {
 .item:first-child {
   margin-left:  auto;
   margin-right: 0;
-  width: 100px;
-  height: 100px
+  width: 15vh;
 }
 
 
@@ -220,7 +168,7 @@ html, body {
 @media (max-width: 1200px) {
   .digigauge {
     flex-direction: column;
-    height: 250px;
+    height:45vh;
     justify-content: space-between;
     align-items: center;
     width: calc(100% - 50px);
@@ -233,7 +181,7 @@ html, body {
     width: 30px;
     background: #ffffff;
     position: absolute;
-    height: 100px;
+    height: 20vh;
     top: 15px;
     right: 0;
   }
